@@ -21,6 +21,7 @@ func initDatabase(dsn string, logger *zap.Logger) *sql.DB {
 	}
 
 	if err = db.Ping(); err != nil {
+		db.Close()
 		logger.Fatal(err.Error())
 	}
 	return db

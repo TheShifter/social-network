@@ -4,6 +4,8 @@ import (
 	"context"
 	"os"
 	"os/signal"
+	"social-network/internal/servers"
+	"social-network/internal/services"
 	"sync"
 	"syscall"
 )
